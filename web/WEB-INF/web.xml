@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ShoppingListServlet</servlet-name>
-        <url-pattern>/ShoppingList</url-pattern>
+        <url-pattern>/shoppingList</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -15,7 +15,7 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>
-            ShoppingList
+            shoppingList
         </welcome-file>
     </welcome-file-list>
 </web-app>
