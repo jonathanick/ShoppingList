@@ -12,11 +12,15 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <C:Set var=min value=1>
-            <C:if test="${min==2}">
-                dude
-            </C:if>
-               
+        <c:choose>
+            <c:when test="${registered == true}">
+                <p>Hello, ${username} <a href="shoppingList?action=logout"><u>Logout</u></a></p>
+            </c:when>  
+            <c:otherwise>
+                <form action="shoppingList?action=register" method="post">
+                    <p>Username: <input type="Text" name="username"><input type="submit" value="login"></p>
+                </form>
+            </c:otherwise>    
+        </c:choose>        
     </body>
 </html>

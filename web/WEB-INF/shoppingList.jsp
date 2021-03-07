@@ -12,22 +12,22 @@
         <title>Shopping List</title><br>
     </head>
     <body>
-        <h1>List</h1>
-        <br>
-        <form action="shoppingList.jsp?action=add" method="post">
-            <h3>Add item:</h3><input type="Text" name="item"><input type="submit" value="add">
+    <c:import url="./register.jsp" />
+    <c:if test = "${toAdd==true}">
+        1 
+        <h2>List</h2>
+        <form action="shoppingList?action=add" method="post">
+            <h3>Add item:<input type="text" name="add"><input type="submit" value="Add"></h3>
         </form>
-        <br>
-        <form action="shoppingList.jsp?action=delete" method="post">
-            <table name="names">
-                
-            </table>
-            <input type="submit" value="Delete">
+    </c:if>
+    <c:if test = "${toDelete ==true}">
+         2
+         <form action="shoppingList?action=delete" method="post">
+            <h3>Add item:<input type="text" name="add2"><input type="submit" value="delete"></h3>
         </form>
-        <h1>Hello World!</h1>
-        <C:Set var="min" value=1>
-            <C:if test="${min==1}">
-                <C:out value="${min}" />
-            </C:if>
+    </c:if>
+         <c:if test = "${Deleted ==true}">
+             3
+         </c:if>    
     </body>
 </html>
